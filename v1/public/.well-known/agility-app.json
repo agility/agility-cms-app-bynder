@@ -1,0 +1,38 @@
+{
+	"name": "Agility Byndr App v1",
+	"documentationLink": "https://agilitycms.com/docs/apps/bynder",
+	"description": "Connect your Bynder assets with Agility.",
+	"version": "1.0.0",
+	"__sdkVersion": "2.0.0",
+	"configValues": [
+		{
+			"label": "Bynder URL",
+			"description": "Your Bynder URL root.",
+			"name": "bynderurl",
+			"type": "string"
+		}
+	],
+	"capabilities": {
+
+		"fields": [
+			{
+				"name": "BynderImageField",
+				"label": "Bynder Image",
+				"description": "An image from Bynder."
+			},
+			{
+				"name": "BynderVideoField",
+				"label": "Bynder Video",
+				"description": "A video from Bynder."
+			}
+		],
+		"modals": [
+			{
+				"name": "bynder-asset-selector",
+				"label": "Bynder Asset Selector",
+				"description": "Select an asset from Bynder."
+			}
+		],
+		"installScreen": false
+	}
+}
