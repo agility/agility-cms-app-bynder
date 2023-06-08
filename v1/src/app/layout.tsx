@@ -6,8 +6,8 @@ import {Mulish} from "next/font/google"
 const mulish = Mulish({subsets: ["latin"]})
 
 export const metadata = {
-	title: "Agility CMS BigCommerce App",
-	description: "Connect your BigCommerce store to Agility CMS",
+	title: "Agility CMS Bynder App",
+	description: "Connect your Bynder assets with Agility",
 }
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
