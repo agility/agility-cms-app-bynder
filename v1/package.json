@@ -10,9 +10,14 @@
   },
   "dependencies": {
     "@agility/app-sdk": "^2.0.5",
-    "@agility/plenum-ui": "^2.0.1",
+    "@agility/plenum-ui": "^2.0.9",
     "@bynder/compact-view": "^3.3.4",
-    "@tabler/icons-react": "^2.22.0",
+    "@floating-ui/react": "^0.25.0",
+    "@headlessui/react": "^1.7.10",
+    "@headlessui/tailwindcss": "^0.1.2",
+    "@heroicons/react": "^1.0.5",
+    "@tabler/icons": "^2.26.0",
+    "@tabler/icons-react": "^2.27.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
@@ -25,6 +30,7 @@
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }
