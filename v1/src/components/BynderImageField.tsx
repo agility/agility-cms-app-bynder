@@ -72,7 +72,7 @@ export default function BynderImageField() {
 									"mx-auto flex h-full w-full max-w-[275px] items-center justify-center border-0 bg-contain bg-clip-border bg-center bg-no-repeat"
 								}
 								style={{
-									backgroundImage: `url(${attachment.derivatives?.thumbnail || attachment.url})`,
+									backgroundImage: `url(${attachment?.derivatives?.thumbnail || attachment?.url})`,
 								}}
 							></div>
 							<AttachmentOverlay isImage={true} />
