@@ -49,9 +49,8 @@ export default function BynderAssetSelector() {
             language="en_US"
             assetTypes={assetType && [assetType]}
             isContainerMode
-            onSuccess={(assets) => {
-              const [asset] = assets;
-              closeModal(asset);
+            onSuccess={(_, selectedFile) => {
+              closeModal(selectedFile.selectedFile);
             }}
             assetFieldSelection={assetFieldSelection}
           />
