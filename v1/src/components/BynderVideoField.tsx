@@ -80,7 +80,7 @@ export default function BynderVideoField() {
                 poster={attachment?.files?.thumbnail?.url}
                 className="border-[3px] transition-all border-gray-300  focus-within:border-purple-600 hover:border-purple-600 w-full"
               >
-                <source src={attachment?.previewUrls[0]} type="video/mp4" />
+                <source src={attachment?.previewUrls?.[0]} type="video/mp4" />
               </video>
               <AttachmentOverlay isImage={false} />
               <i className="fa fa-picture-o" aria-hidden="true"></i>
