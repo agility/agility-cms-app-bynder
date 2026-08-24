@@ -45,12 +45,19 @@ export default function BynderAssetSelector() {
           }}
         >
           <CompactView
-            mode="SingleSelectFile"
+            mode={assetType === "VIDEO" ? "SingleSelect" : "SingleSelectFile"}
             language="en_US"
             assetTypes={assetType && [assetType]}
             isContainerMode
-            onSuccess={(_, selectedFile) => {
-              closeModal(selectedFile.selectedFile);
+            onSuccess={(assets, additionalInfo) => {
+              if (assetType === "VIDEO") {
+                // videos need the full asset (previewUrls, derivatives) —
+                // the selected file is only an image derivative
+                const [asset] = assets;
+                closeModal(asset);
+              } else {
+                closeModal(additionalInfo.selectedFile);
+              }
             }}
             assetFieldSelection={assetFieldSelection}
           />
