@@ -15,10 +15,14 @@ const Metadata = ({
   handleAltTextChange,
   isImage,
 }: Props) => {
-  const orig =
-    attachment && attachment.files ? attachment.files.original : null;
+  // Whole assets carry their metadata under files.original; a selected file
+  // (saved since images moved to SingleSelectFile) carries it at the top level.
+  const isWholeAsset = !!attachment?.files;
+  const orig = isWholeAsset ? attachment.files.original : attachment;
+  const assetUrl: string =
+    (isWholeAsset ? attachment.originalUrl : attachment?.url) || "";
 
-  let fileName = attachment.originalUrl || "";
+  let fileName = assetUrl.split("?")[0];
   if (fileName.includes("/")) {
     fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
   }
@@ -48,7 +52,7 @@ const Metadata = ({
         value={
           <a
             className="block break-all text-purple-600 line-clamp-1 hover:underline"
-            href={attachment.originalUrl}
+            href={assetUrl || undefined}
             target="_blank"
             rel="noreferrer"
           >
